@@ -28,8 +28,8 @@ How do I use it?
 ----------------
 Simply run:
 
-  curl https://nvd.nist.gov/static/feeds/xml/cve/nvdcve-2.0-recent.xml | \
-    nvd2sqlite3 -d /wherever/you/like/to/keep/the/dbfile
+    curl https://nvd.nist.gov/static/feeds/xml/cve/nvdcve-2.0-recent.xml | \
+            nvd2sqlite3 -d /wherever/you/like/to/keep/the/dbfile
 
 By default, 'nvd2sqlite3' will use '/var/db/cvedb' as the database file,
 so make sure that the user invoking the command has write access to that
