@@ -1,0 +1,44 @@
+.Dd April 25, 2013
+.Dt CVEDB 1
+.Os
+.Sh NAME
+.Nm nvd2sqlite3
+.Nd sync NVD input into a local sqlite3 database
+.Sh SYNOPSIS
+.Nm
+.Op Fl hv
+.Op Fl d Ar dbfile
+.Sh DESCRIPTION
+.Nm
+is a very simple tool to fetch and sync the contents of the National
+Vulnerability Database into a local sqlite3 database.
+It reads input in NIST's CVE-Feed XML format from stdin and updates the
+local database with any new entries.
+.Sh OPTIONS
+.Nm
+supports the following options:
+.Bl -tag -width d_dbfile_
+.It Fl d Ar dbfile
+Update the given database file.
+.It Fl h
+Print a short usage statement and exit.
+.It Fl v
+Be verbose.
+Can be specified multiple times.
+.El
+.Sh EXAMPLES
+To pull in the NVD from nist:
+.Bd -literal -offset indent
+curl https://nvd.nist.gov/static/feeds/xml/cve/nvdcve-2.0-recent.xml | nvd2sqlite3
+.Ed
+.Sh EXIT STATUS
+.Ex -std
+.Sh SEE ALSO
+.Xr sqlite3 1 ,
+.Xr yvc 1
+.Sh HISTORY
+.Nm
+was originally written by
+.An Jan Schaumann
+.Aq jschauma@netmeister.org
+in April 2013.

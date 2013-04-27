@@ -1,0 +1,3 @@
+setup.py
+src/nvd2sqlite3
+doc/nvd2sqlite3.1.gz
