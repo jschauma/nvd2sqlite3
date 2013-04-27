@@ -1,0 +1,39 @@
+CVEDB(1)		NetBSD General Commands Manual		      CVEDB(1)
+
+NAME
+     nvd2sqlite3 -- sync NVD input into a local sqlite3 database
+
+SYNOPSIS
+     nvd2sqlite3 [-hv] [-d dbfile]
+
+DESCRIPTION
+     nvd2sqlite3 is a very simple tool to fetch and sync the contents of the
+     National Vulnerability Database into a local sqlite3 database.  It reads
+     input in NIST's CVE-Feed XML format from stdin and updates the local
+     database with any new entries.
+
+OPTIONS
+     nvd2sqlite3 supports the following options:
+
+     -d dbfile	Update the given database file.
+
+     -h		Print a short usage statement and exit.
+
+     -v		Be verbose.  Can be specified multiple times.
+
+EXAMPLES
+     To pull in the NVD from nist:
+
+	   curl https://nvd.nist.gov/static/feeds/xml/cve/nvdcve-2.0-recent.xml | nvd2sqlite3
+
+EXIT STATUS
+     The nvd2sqlite3 utility exits 0 on success, and >0 if an error occurs.
+
+SEE ALSO
+     sqlite3(1), yvc(1)
+
+HISTORY
+     nvd2sqlite3 was originally written by Jan Schaumann
+     <jschauma@netmeister.org> in April 2013.
+
+NetBSD 5.0			April 25, 2013			    NetBSD 5.0
