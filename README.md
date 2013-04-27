@@ -35,7 +35,7 @@ By default, 'nvd2sqlite3' will use '/var/db/cvedb' as the database file,
 so make sure that the user invoking the command has write access to that
 file.
 
-Please see the manual page for details.
+Please see the [manual page](https://raw.github.com/jschauma/nvd2sqlite3/master/doc/nvd2sqlite3.1.txt) for details.
 
 Who wrote this tool?
 --------------------
